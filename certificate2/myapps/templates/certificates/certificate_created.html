@@ -1,0 +1,31 @@
+<!-- certificates/templates/certificates/certificate_created.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Certificate Created</title>
+    <style>
+        /* CSS styling for certificate */
+        .certificate {
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Certificate Created</h1>
+    <div class="certificate" id="certificate">
+        <p>Certificate ID: {{ certificate.id }}</p>
+        <p>Title: {{ certificate.title }}</p>
+        <p>Content: {{ certificate.content }}</p>
+    </div>
+    <button onclick="customizeCertificate()">Customize Certificate</button>
+    <script>
+        function customizeCertificate() {
+            const certificateDiv = document.getElementById('certificate');
+            certificateDiv.style.backgroundColor = 'lightblue';
+        }
+    </script>
+</body>
+</html>
+
